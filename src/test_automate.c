@@ -79,9 +79,8 @@ int main(){
 		printf("\n'%s' est reconnu....\n", mot5);
 	else
 		printf("\n'%s' n'est pas reconnu....\n", mot5);
-	
-	liberer_automate(automate);		
 
+	print_automate(automate);
 	print_separation_tests();
 
 	Automate * automate2 = creer_automate();
@@ -122,6 +121,10 @@ int main(){
 	printf("\n\n\nAutomate des sous mots de Automate2\n");
 	print_automate(sousmot);
 
+
+	print_separation_tests();
+
+
 	liberer_automate(suffixes);
 	liberer_automate(prefix);
 	liberer_automate(facteur);
@@ -155,6 +158,14 @@ int main(){
 	print_automate(melange);
 
 	liberer_automate(mot_automate);
+	liberer_automate(suffixes);
+	liberer_automate(prefix);
+	liberer_automate(facteur);
+	liberer_automate(surmot);
+	liberer_automate(sousmot);
+	liberer_automate(aaa);
+	liberer_automate(bbb);
+	liberer_automate(melange);
 
 	// Test creer_automate_de_concatenation
 	print_separation_tests();
@@ -189,6 +200,5 @@ int main(){
 
 	printf("Automate concaténé\n");
 	print_automate(concatenation);
-
 	exit(1);
 }
